@@ -6,7 +6,7 @@
    --logo-color-2: #2aeb3a;
   --nav-text: #222;
   --nav-hover: #22e732;
-  --contact-text: #fff; 
+  --contact-text: #222; 
   --btn-bg: #4ada56;      
   --btn-text: #222;       
   --btn-hover-bg: #f1edd0;       
@@ -25,7 +25,7 @@
   --footer-text: #027402;
   --chat-bg: #222;
   --chat-text: #fff;
-  --chat-header-bg: #92614a;
+  --chat-header-bg: #509131;
   --chat-content-bg: #f1edd0;
   --chat-bubble-bg: #f0e9b3;
   --chat-bubble-text: #222;
@@ -57,6 +57,8 @@ body {
 /* Header */
 .header {
   box-shadow: 0 2px 8px rgba(92,184,92,0);
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
   position: absolute;
   width: 100%;
   top: 0;
@@ -68,7 +70,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.3rem 0;
+  padding: 0.5rem 0;
 }
 .logo {
   font-size: 2rem;
@@ -100,7 +102,7 @@ body {
 }
 .contact-info{
     color:var(--contact-text);
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1.1rem;
 }
 .btn {
@@ -164,13 +166,15 @@ body {
 .hero-text p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  padding: 1rem 1rem;
+  border-radius: 3rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
 .hero-mission {
   background: rgba(182,233,125,0.10);
   padding: 1.5rem 2rem;
-  border-radius: 1rem;
+  border-radius: 3rem;
   max-width: 320px;
   color: var(--hero-text);
   box-shadow: 0 2px 12px rgba(92,184,92,0.08);
@@ -402,7 +406,7 @@ body {
 .footer-contact {
   flex: 1 1 220px;
 }
-.newsletter {
+/*.newsletter {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1rem;
@@ -426,7 +430,7 @@ body {
 }
 .newsletter button:hover {
   background: var(--btn-hover-bg);
-}
+}*/
 .footer-links {
   display: flex;
   gap: 2rem;
@@ -599,8 +603,8 @@ body {
 }
 .chatbox-toggle {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 60px;
+  right: 40px;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -840,6 +844,7 @@ ul li:hover {
     padding: 1.2rem 0.7rem;
     font-size: 1rem;
   }
+  /*
   .testimonials {
     padding: 1.5rem 0 1rem 0;
   }
@@ -851,6 +856,7 @@ ul li:hover {
     padding: 1.2rem 0.7rem;
     font-size: 1rem;
   }
+  */
   .footer-content {
     flex-direction: column;
     gap: 1rem;
@@ -863,6 +869,7 @@ ul li:hover {
   .footer-links div {
     min-width: 0;
   }
+  /*
   .newsletter {
     flex-direction: column;
     gap: 0.5rem;
@@ -874,7 +881,7 @@ ul li:hover {
   .newsletter button {
     width: 100%;
     font-size: 1rem;
-  }
+  }*/
   .footer-social {
     margin-top: 1rem;
   }
