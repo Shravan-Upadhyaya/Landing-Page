@@ -187,6 +187,17 @@ body {
   text-decoration: underline;
   font-size: 0.95rem;
 }
+.hero::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20%;
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(to top, rgba(34,34,34,0.65) 10%, rgba(34,34,34,0) 80%);
+}
 
 /* About/Stats Section */
 .about {
@@ -720,13 +731,20 @@ ul li:hover {
     box-sizing: border-box;
   }
 
+  .header{
+    backdrop-filter: none;
+-webkit-backdrop-filter: none;
+
+  }
   #hamburger-icon {
     display: block;
   }
   .nav a{
     display: none;
   }
-  
+  .hero::after{
+    z-index: 0;
+  }
   .hero {
     padding-top: 10em;
   }
@@ -788,14 +806,25 @@ ul li:hover {
   .hero-text {
     max-width: 100%;
   }
-  .hero-text h1,p {
-    font-size: 2rem;
-      padding-left:5px;
+  .hero-text h1 {
+    
+    font-size: 1.4rem;
+    padding-left: 10px;
+    text-align: center;
+  }
+  .hero-text p {
+    font-size: 0.95rem;
+    padding-left: 10px;
+  }
+  
+  .hero-mission h3 {
+    font-size: 1.3rem;
+    text-align: center;
   }
   .hero-mission {
     max-width: 100%;
-    padding: 1rem 0.7rem;
-    font-size: 0.98rem;
+    font-size: 0.9rem;
+    padding: 1rem 1rem;
   }
   .about-tabs {
     flex-direction: column;
@@ -869,24 +898,29 @@ ul li:hover {
     min-height: 60vh;
     background-size: cover !important;
     background-position: center !important;
-  }
-}
-@media (max-width: 400px) {
-  .hero-text h1,p {
-    font-size: 2rem;
-    padding-left:5px;
+    
   }
 
-  .feature {
-    font-size: 0.95rem;
-    padding: 0.7rem 0.3rem;
+  .hero-text h1 {
+    font-size: 1.3rem;
+    padding-left: 10px;
+    text-align: center;
   }
-  .testimonial {
+  .hero-text p {
     font-size: 0.95rem;
-    padding: 0.7rem 0.3rem;
+    padding-left: 10px;
   }
-  .footer-bottom {
-    font-size: 0.8rem;
+  .hero-mission h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .hero-mission {
+    font-size: 0.9rem;
+    padding: 1rem 1rem;
+  }
+  .hero::after {
+    height: 50%;
+    background: linear-gradient(to top, rgba(34,34,34,0.7) 40%, rgba(34,34,34,0) 100%);
   }
 }
 
