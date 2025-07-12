@@ -193,43 +193,6 @@ const fadeObserverfast = new IntersectionObserver((entries) => {
 
 fadeSectionsfast.forEach(section => fadeObserverfast.observe(section)); 
 
-// === Mobile Hamburger Menu Toggle (Sidebar Animation) ===
-(function() {
-  const navToggle = document.getElementById('mobile-nav-toggle');
-  const nav = document.getElementById('mobile-nav');
-  if (!navToggle || !nav) return;
-
-  function checkNavDisplay() {
-    if(window.innerWidth <= 900) {
-      navToggle.style.display = 'block';
-      nav.classList.add('mobile');
-      nav.classList.remove('nav--open');
-      document.body.classList.remove('nav-overlay');
-    } else {
-      navToggle.style.display = 'none';
-      nav.classList.remove('mobile', 'nav--open');
-      document.body.classList.remove('nav-overlay');
-    }
-  }
-
-  navToggle.addEventListener('click', () => {
-    if(nav.classList.contains('nav--open')) {
-      nav.classList.remove('nav--open');
-      document.body.classList.remove('nav-overlay');
-    } else {
-      nav.classList.add('nav--open');
-      document.body.classList.add('nav-overlay');
-    }
-  });
-
-  // Use event delegation for nav links
-  nav.addEventListener('click', function(e) {
-    if (e.target.tagName === 'A' && nav.classList.contains('mobile') && window.innerWidth <= 900) {
-      nav.classList.remove('nav--open');
-      document.body.classList.remove('nav-overlay');
-    }
-  });
-
-  window.addEventListener('resize', checkNavDisplay);
-  window.addEventListener('DOMContentLoaded', checkNavDisplay);
-})(); 
+function toggleMobileMenu(menu) {
+  menu.classList.toggle('open');
+}
