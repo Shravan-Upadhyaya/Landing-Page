@@ -29,7 +29,7 @@
   --chat-content-bg: #f1edd0;
   --chat-bubble-bg: #f0e9b3;
   --chat-bubble-text: #222;
-  --chat-hover: #F1EDD0;
+  --chat-hover: #4ada56;
   --scroll-hover-bg: #222;
   --scroll-hover-text: #f1edd0;
   --scroll-bg: #4ada56;
@@ -78,7 +78,7 @@ body {
   color: var(--logo-color-1);
 }
 .img-logo{
-  background: url('/assets/logo.jpg') no-repeat;
+  background: url('/assets/logo-modified.png') no-repeat;
   background-size: contain;
   width: 50px;
   height: 50px;
@@ -131,7 +131,7 @@ body {
 .hero {
   position: relative;
   min-height:80vh;
-  background: linear-gradient(rgba(41, 41, 41, 0.1), rgba(39, 39, 39, 0.1)), url('/assets/field1.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(41, 41, 41, 0.1), rgba(39, 39, 39, 0.1)), url('/assets/field.jpeg') center/cover no-repeat;
   color: var(--hero-text);
   display: flex;
   align-items: center;
