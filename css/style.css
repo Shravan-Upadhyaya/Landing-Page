@@ -35,6 +35,8 @@
   --scroll-bg: #4ada56;
   --scroll-text: #222;
   --white: #ffffff;
+  --menu-color:#fff;
+  --menu-bg:#2c1919;
 }
 * {
   margin: 0;
@@ -223,6 +225,7 @@ body {
   cursor: pointer;
   color: var(--about-text);
   transition: background 0.2s, color 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 .tab.active, .tab:hover {
   background: var(--about-hover-bg);
@@ -396,6 +399,8 @@ body {
   background: var(--footer-bg);
   color: var(--footer-text);
   padding: 2.5rem 0 1rem 0;
+  -webkit-tap-highlight-color: transparent;
+  
 }
 .footer-content {
   display: flex;
@@ -619,6 +624,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: background 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 .chatbox-toggle:hover {
   background: var(--chat-hover);
@@ -644,6 +650,7 @@ body {
   justify-content: center;
   transition: background 0.2s, opacity 0.2s;
   opacity: 0.85;
+  -webkit-tap-highlight-color: transparent;
 }
 .scrolltop:hover {
   background: var(--scroll-hover-bg);
@@ -659,14 +666,16 @@ body {
   margin: auto 0;
   display: none;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent
 }
 
 #hamburger-icon div {
   width: 35px;
   height: 3px;
-  background-color: var(--white);
+  background-color: var(--menu-color);
+  border-radius: 5rem;
   margin: 6px 0;
-  transition: 0.4s;
+  transition: all 0.4s ease;
 }
 
 .open .bar1 {
@@ -779,6 +788,9 @@ ul li:hover {
     backdrop-filter: none;
 -webkit-backdrop-filter: none;
 
+  }
+  .align{
+    padding-right: 350px ;
   }
   .header-content {
     flex-direction: column;
@@ -902,13 +914,18 @@ ul li:hover {
     right: 1vw;
     bottom: 20px;
   }
+}
+
+  @media (max-width: 400px) {
   .hero {
     min-height: 60vh;
     background-size: cover !important;
     background-position: center !important;
     
   }
-
+  .align{
+    padding-right: 300px ;
+  }
   .hero-text h1 {
     font-size: 1.3rem;
     padding-left: 10px;
